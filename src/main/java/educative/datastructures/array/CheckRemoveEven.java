@@ -1,9 +1,11 @@
-package datastructures.array;
+package educative.datastructures.array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
+ *
+ * https://leetcode.com/problems/remove-duplicates-from-sorted-array/
  * Created by George Fouche on 12/6/19.
  */
 public class CheckRemoveEven {
@@ -15,6 +17,11 @@ public class CheckRemoveEven {
 
     }
 
+    /**
+     * Time Complexity: O(n)
+     * @param arr
+     * @return
+     */
     private static int[] removeEvenExp2(int[] arr) {
         int oddElements = 0;
 
@@ -31,6 +38,11 @@ public class CheckRemoveEven {
         return result;
     }
 
+    /**
+     * Time Complexity: O(n)
+     * @param arr
+     * @return
+     */
     private static int[] removeEvenExp1(int[] arr) {
         ArrayList<Integer> result = new ArrayList<Integer>();
         for (int i = 0; i < arr.length; i++) {

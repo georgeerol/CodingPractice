@@ -1,11 +1,11 @@
-package datastructures.array;
+package educative.datastructures.array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 
 /**
+ * https://leetcode.com/problems/merge-sorted-array/
  * Created by George Fouche on 12/6/19.
  */
 public class CheckMergeArray {
@@ -33,6 +33,13 @@ public class CheckMergeArray {
         return result;
     }
 
+    /**
+     * Time complexity :O(n+m) where n an m are the sizes of the arrays. This is because
+     * both arrays are iterated over once.
+     * @param arr1
+     * @param arr2
+     * @return
+     */
     private static int[] mergeArraysExp2(int[] arr1, int[] arr2) {
         int s1 = arr1.length;
         int s2 = arr2.length;

@@ -1,4 +1,4 @@
-package datastructures.array;
+package educative.datastructures.array;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -6,6 +6,8 @@ import java.util.Map;
 
 /**
  * Created by George Fouche on 12/6/19.
+ * https://leetcode.com/problems/two-sum/
+ * Find Two Numbers that Add up to "n"
  */
 public class CheckSum {
 
@@ -16,6 +18,12 @@ public class CheckSum {
         System.out.println(Arrays.toString(findSumExp1(arr,value)));
     }
 
+    /**
+     * Time Complexity: O(n) as the whole array is iterated over once
+     * @param arr
+     * @param value
+     * @return
+     */
     private static int[] findSumExp1(int[] arr, int value) {
         Map<Integer,Integer> map = new HashMap<Integer, Integer>();
         for(int i =0; i <arr.length;i++){
