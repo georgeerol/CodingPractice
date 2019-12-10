@@ -1,4 +1,4 @@
-package educative.datastructures.array.linkedlist;
+package educative.datastructures.linkedlist;
 
 /**
  * Created by George Fouche on 12/9/19.
@@ -6,14 +6,6 @@ package educative.datastructures.array.linkedlist;
 
 
 public class SingleLinkedList {
-    class Node {
-        int val;
-        Node next;
-
-        Node(int val) {
-            this.val = val;
-        }
-    }
 
     public static void main(String[] args) {
         SingleLinkedList list = new SingleLinkedList();
@@ -30,10 +22,38 @@ public class SingleLinkedList {
         list2.insertAtEnd(4);
         System.out.println("Insert at End");
         System.out.println(list2);
+        System.out.println("Insert 3 after 2");
         list2.insertAfter(3, 2);
+        System.out.println("Searching for 3");
+        System.out.println(list2.searchNode(3));
+        System.out.println(list2);
+        System.out.println("Delete at head");
+        list2.deleteAtHead();
         System.out.println(list2);
 
 
+        System.out.println();
+
+        SingleLinkedList list3 = new SingleLinkedList();
+        list3.insertAtEnd(1);
+        list3.insertAtEnd(2);
+        list3.insertAtEnd(4);
+        System.out.println("Insert at End");
+        System.out.println(list3);
+        System.out.println("Delete by value");
+        list3.deleteByValue(2);
+        System.out.println(list3);
+
+
+    }
+
+    class Node {
+        int val;
+        Node next;
+
+        Node(int val) {
+            this.val = val;
+        }
     }
 
     private Node head;
@@ -72,11 +92,46 @@ public class SingleLinkedList {
     }
 
 
+    boolean searchNode(int data) {
+        Node current = this.head;
+        while (current != null) {
+            if (current.val == data) return true;
+            current = current.next;
+        }
+        return false;
+    }
 
+    void deleteAtHead() {
+        if (!isEmpty()) {
+            head = head.next;
+        }
+    }
+
+    void deleteByValue(int data) {
+        if (!isEmpty()) {
+            Node current = this.head;
+            Node prev = null;
+
+            // data is at head so delete from head
+            if (current.val == data) {
+                deleteAtHead();
+                return;
+            }
+
+            while (current != null) {
+                if (current.val == data) {
+                    prev.next = current.next;
+                    return;
+                }
+                prev = current;
+                current = current.next;
+            }
+
+        }
+    }
 
     private boolean isEmpty() {
-        if (head == null) return true;
-        return false;
+        return this.head == null;
     }
 
     @Override
