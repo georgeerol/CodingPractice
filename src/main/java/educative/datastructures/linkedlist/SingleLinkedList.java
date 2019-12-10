@@ -64,6 +64,7 @@ public class SingleLinkedList {
         this.head = newNode;
     }
 
+    @SuppressWarnings("Duplicates")
     private void insertAtEnd(int data) {
         if (isEmpty()) {
             insertAtHead(data);
