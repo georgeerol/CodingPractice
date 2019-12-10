@@ -1,5 +1,7 @@
 package Leetcode.LinkedList;
 
+import java.util.Stack;
+
 /**
  * https://leetcode.com/problems/palindrome-linked-list/
  * Created by George Fouche on 12/8/19.
@@ -12,6 +14,7 @@ public class PalindromeLinkedList {
         list.insertAtEnd(1);
         list.insertAtEnd(2);
         System.out.println(list);
+        System.out.println(list.isPalindrome());
 
 
         PalindromeLinkedList list2 = new PalindromeLinkedList();
@@ -20,20 +23,45 @@ public class PalindromeLinkedList {
         list2.insertAtEnd(2);
         list2.insertAtEnd(1);
         System.out.println(list2);
+        System.out.println(list2.isPalindrome());
 
     }
 
-    class Node<Integer> {
+    class Node {
         int val;
         Node next;
 
-        public Node(int val) {
+        Node(int val) {
             this.val = val;
         }
     }
 
-
     private Node head;
+
+    private boolean isPalindrome() {
+        if (head == null || head.next == null) return true;
+
+        Stack<Integer> s = new Stack<>();
+        Node slow = head;
+        Node fast = head;
+        while (fast != null && fast.next != null) {
+            s.push(slow.val);
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        //Allowed to ignore middle node
+        if (fast != null) {
+            slow = slow.next;
+        }
+        while (slow != null) {
+            if (s.pop() != slow.val) {
+                return false;
+            }
+            slow = slow.next;
+        }
+
+        return true;
+    }
 
     @SuppressWarnings("Duplicates")
     private void insertAtEnd(int data) {
