@@ -1,4 +1,4 @@
-package educative.datastructures.linkedlist;
+package fundamental.datastructures.linkedlist;
 
 /**
  * Created by George Fouche on 12/9/19.

@@ -1,4 +1,4 @@
-package educative.datastructures.array;
+package fundamental.datastructures.array;
 
 /**
  * Created by George Fouche on 12/7/19.

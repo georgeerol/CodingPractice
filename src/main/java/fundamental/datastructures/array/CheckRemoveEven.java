@@ -1,4 +1,4 @@
-package educative.datastructures.array;
+package fundamental.datastructures.array;
 
 import java.util.ArrayList;
 import java.util.Arrays;

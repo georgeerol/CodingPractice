@@ -1,4 +1,4 @@
-package educative.datastructures.array;
+package fundamental.datastructures.array;
 
 import java.util.Arrays;
 import java.util.HashMap;
