@@ -21,7 +21,7 @@ public class CheckFirstUnique {
      * @return
      */
     private static int findFirstUnique(int[] arr) {
-        Map<Integer, Integer> countElements = new HashMap<Integer, Integer>();
+        Map<Integer, Integer> countElements = new HashMap<>();
         for (int i : arr) {
             if (countElements.containsKey(i)) {
                 countElements.put(i, countElements.get(i) + 1);
