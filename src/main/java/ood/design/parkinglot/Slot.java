@@ -1,5 +1,7 @@
 package ood.design.parkinglot;
 
+import ood.design.parkinglot.vehicles.VehicleSIZE;
+
 /**
  * Created by George Fouche on 1/2/20.
  */
