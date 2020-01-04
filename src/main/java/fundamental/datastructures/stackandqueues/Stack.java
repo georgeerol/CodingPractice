@@ -14,28 +14,28 @@ public class Stack {
         this.top = -1;
     }
 
-    private void push(int data) {
+    public void push(int data) {
         if (isFull()) throw new RuntimeException("Stack is full");
         stackArray[++top] = data;
     }
 
-    private int pop() {
+    public int pop() {
         if (isEmpty()) throw new RuntimeException("Stack is empty");
         return stackArray[top--];
     }
 
-    private int peek() {
+    public int peek() {
         if (isEmpty()) throw new RuntimeException("Stack is empty");
         return stackArray[top];
 
     }
 
 
-    private boolean isFull() {
+    public boolean isFull() {
         return top == maxSize - 1;
     }
 
-    private boolean isEmpty() {
+    public boolean isEmpty() {
         return top < 0;
     }
 
