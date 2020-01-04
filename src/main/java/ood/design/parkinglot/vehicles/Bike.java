@@ -1,0 +1,13 @@
+package ood.design.parkinglot.vehicles;
+
+
+import ood.design.parkinglot.VehicleSIZE;
+
+/**
+ * Created by George Fouche on 12/29/19.
+ */
+public class Bike extends Vehicle {
+    public Bike(int id) {
+        super(id, VehicleSIZE.Small);
+    }
+}
