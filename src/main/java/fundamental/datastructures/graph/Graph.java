@@ -12,10 +12,9 @@ public class Graph {
     int vertices; // Total number or vertices in graph
 
     /*
-    * To store an array of Linked List. Each index of the array represents a vertex of the graph
-    * and the linked list represents the adjacent vertices.
-
-    * */
+     * To store an array of Linked List. Each index of the array represents a vertex of the graph
+     * and the linked list represents the adjacent vertices.
+     * */
     LinkedList<Integer> adjacencyList[];
 
     @SuppressWarnings("unchecked")
@@ -29,21 +28,20 @@ public class Graph {
     }
 
     /**
-     *
-     * @param source - vertex number
+     * @param source      - vertex number
      * @param destination - destination vertex number
      */
-    private void addEdge(int source, int destination) {
+    public void addEdge(int source, int destination) {
         this.adjacencyList[source].addLast(destination);
 
         //for undirected graph uncomment the line below
-        this.adjacencyList[destination].addLast(source);
+        //this.adjacencyList[destination].addLast(source);
     }
 
     static void printGraph(Graph graph) {
         for (int v = 0; v < graph.vertices; v++) {
             System.out.println("Adjacency list of vertex " + v);
-            System.out.print("["+v+"]" );
+            System.out.print("[" + v + "]");
             for (Integer data : graph.adjacencyList[v]) {
                 System.out.print("->" + data);
             }
@@ -59,7 +57,7 @@ public class Graph {
         g.addEdge(0, 2); // create an edge from 0 to 2
         g.addEdge(1, 3); // create an edge from 1 to 3
         g.addEdge(2, 3); // create an edge from 2 to 3
-       // g.addEdge(3, 0);
+        // g.addEdge(3, 0);
         printGraph(g);
     }
 
