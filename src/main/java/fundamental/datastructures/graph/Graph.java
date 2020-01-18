@@ -1,7 +1,5 @@
 package fundamental.datastructures.graph;
 
-import fundamental.datastructures.linkedlist.DoublyLinkedList;
-
 import java.util.LinkedList;
 
 /**
@@ -11,7 +9,7 @@ public class Graph {
 
     int vertices; // Total number or vertices in graph
 
-    /*
+    /**
      * To store an array of Linked List. Each index of the array represents a vertex of the graph
      * and the linked list represents the adjacent vertices.
      * */

@@ -71,4 +71,15 @@ public class TreeNode {
         System.out.print(data + " ");
     }
 
+    public int getData() {
+        return data;
+    }
+
+    public TreeNode getLeftChild() {
+        return leftChild;
+    }
+
+    public TreeNode getRightChild() {
+        return rightChild;
+    }
 }

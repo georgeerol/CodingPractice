@@ -27,9 +27,11 @@ public class BinarySearchTree {
     public TreeNode find(int data) {
         if (root != null) return root.find(data);
         return null;
-
     }
 
+    public TreeNode getRoot() {
+        return root;
+    }
 
     /**
      * Soft delete
