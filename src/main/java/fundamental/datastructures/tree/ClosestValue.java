@@ -6,8 +6,8 @@ package fundamental.datastructures.tree;
 public class ClosestValue {
 
     /**
-     *  Average Time: O(log(n)) | Average Space: O(log(n))
-     *  Worst Time
+     * Average Time: O(log(n)) | Average Space: O(log(n))
+     * Worst Time : O(n) | O(n)
      *
      * @param tree
      * @param target
