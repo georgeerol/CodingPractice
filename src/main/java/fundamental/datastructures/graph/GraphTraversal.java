@@ -54,7 +54,7 @@ public class GraphTraversal {
 
     /**
      * The same approach as BFS solution. However, instead of a queue, we use a stack since it follows the
-     * Last In First OUt (LIFO) approach.
+     * Last In First out (LIFO) approach.
      * @param g
      * @param source
      * @return
