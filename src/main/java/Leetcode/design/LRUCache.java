@@ -1,7 +1,5 @@
 package Leetcode.design;
 
-import fundamental.datastructures.linkedlist.SingleLinkedList;
-
 import java.util.HashMap;
 import java.util.Map;
 
